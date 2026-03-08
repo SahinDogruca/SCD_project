@@ -1,0 +1,22 @@
+# Core
+ultralytics>=8.3.0        # YOLOv12 dahil
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Data
+Pillow>=10.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+
+# Utilities
+PyYAML>=6.0
+tqdm>=4.65.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# DeepLabV3 (ilerisi için)
+segmentation-models-pytorch>=0.3.3
+
+# Notebook / EDA
+jupyter>=1.0.0
+ipywidgets>=8.0.0

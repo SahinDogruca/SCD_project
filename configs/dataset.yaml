@@ -1,0 +1,25 @@
+# YOLO Dataset Konfigürasyonu
+# YOLOv12 instance segmentation için
+
+# Bu path prepare_dataset.py tarafından otomatik güncellenir
+# Kaggle'da /kaggle/working/dataset olur
+path: /Users/sahindogruca/Downloads/OksidatifStress/dataset
+
+train: images/train
+val:   images/val
+test:  images/test
+
+# Sınıf sayısı
+nc: 5
+
+# Sınıf isimleri (hale genişliğine göre sıralı: yok → büyük + bozuk)
+names:
+  0: NH    # No Halo       — hale yok (yüksek DNA fragmentasyonu)
+  1: SH    # Small Halo    — küçük hale
+  2: MH    # Medium Halo   — orta hale
+  3: BH    # Big Halo      — büyük hale (düşük DNA fragmentasyonu)
+  4: DEG   # Degenerated   — dejenere/bozuk sperm
+
+# Metadata
+description: "Sperm SCD (Sperm Chromatin Dispersion) segmentasyon veri seti"
+version: "1.0"
