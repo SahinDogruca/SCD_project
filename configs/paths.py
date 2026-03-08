@@ -17,7 +17,7 @@ def get_paths() -> dict:
     if _is_kaggle():
         # Kaggle'da dataset input klasörü
         # Dataset adını kendi Kaggle dataset adınızla değiştirin
-        KAGGLE_DATASET = os.environ.get("KAGGLE_DATASET_NAME", "oksidatif-stress-sperm")
+        KAGGLE_DATASET = os.environ.get("KAGGLE_DATASET_NAME", "sperm-dataset")
         raw_root = Path(f"/kaggle/input/datasets/ahindoruca/{KAGGLE_DATASET}")
         project_root = Path("/kaggle/working")
     else:
