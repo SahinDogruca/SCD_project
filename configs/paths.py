@@ -15,10 +15,14 @@ def get_paths() -> dict:
     """Çalışma ortamına göre doğru path'leri döndürür."""
 
     if _is_kaggle():
-        # Kaggle'da dataset input klasörü
-        # Dataset adını kendi Kaggle dataset adınızla değiştirin
+        # Kaggle path yapısı:
+        # /kaggle/input/datasets/<kullanici>/<dataset-adi>/OksidatifStress/
+        KAGGLE_USER    = os.environ.get("KAGGLE_USERNAME", "ahindoruca")
         KAGGLE_DATASET = os.environ.get("KAGGLE_DATASET_NAME", "sperm-dataset")
-        raw_root = Path(f"/kaggle/input/datasets/ahindoruca/{KAGGLE_DATASET}")
+        # Alt klasör adı (Kaggle'a yüklendiğinde zip içindeki klasör)
+        KAGGLE_SUBDIR  = os.environ.get("KAGGLE_SUBDIR", "OksidatifStress")
+
+        raw_root     = Path(f"/kaggle/input/datasets/{KAGGLE_USER}/{KAGGLE_DATASET}/{KAGGLE_SUBDIR}")
         project_root = Path("/kaggle/working")
     else:
         # Lokal - bu dosyanın iki üst dizini = proje kökü
